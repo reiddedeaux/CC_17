@@ -30,3 +30,14 @@ class SalesRep {  // Class for sales reps
         }
     }
 }
+//Task 3 
+class VIPCustomer extends Customer { // create vip class
+    constructor(name, email, vipLevel){
+        super(name, email);
+        this.vipLevel = vipLevel; // the vip level
+    }
+    getTotalSpent(){ // vips get a 10% bonus for their spending
+        const initialTotal = super.getTotalSpent();
+        return initialTotal * 1.1;
+    }
+}
